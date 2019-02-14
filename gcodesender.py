@@ -50,7 +50,7 @@ for line in f:
 		print (' : ' + grbl_out.strip().decode('utf-8'))
  
 # Wait here until printing is finished to close serial port and file.
-input("  Press <Enter> to exit.")
+# input("  Press <Enter> to exit.")
  
 # Close file and serial port
 f.close()
