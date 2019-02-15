@@ -2,13 +2,14 @@ from msvcrt import getch
 import sys, os
 import time
 
-magnitude = 50
+magnitude = 130
 speed = 2000
 
-xCount = 3
+# Keep in mind that these counts are indexed at zero, not one
+xCount = 1
 xCountTemp = xCount
 
-yCount = 3
+yCount = 1
 yCountTemp = yCount
 
 while True:
@@ -40,6 +41,7 @@ while True:
             os.system("sendRunner.sh 'G1 X110Y"+str(magnitude*-1)+" F"+str(speed)+"'")
             yCountTemp -= 1
         else:
-            os.system("sendRunner.sh 'G1 X"+str(110+magnitude*xCount)+"Y0 F"+str(speed)+"'")
-            time.sleep(10)
-            os.system("sendRunner.sh 'G1 X110Y"+str(magnitude*-1)+" F"+str(speed)+"'")
+            break
+            # os.system("sendRunner.sh 'G1 X"+str(110+magnitude*xCount)+"Y0 F"+str(speed)+"'")
+            # time.sleep(10)
+            # os.system("sendRunner.sh 'G1 X110Y"+str(magnitude*-1)+" F"+str(speed)+"'")
